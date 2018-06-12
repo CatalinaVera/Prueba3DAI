@@ -1,0 +1,38 @@
+CREATE DATABASE PRUEBA3BD;
+
+USE PRUEBA3BD;
+
+CREATE TABLE pasajero(
+run_pasajero INT NOT NULL,
+dv_pasajero VARCHAR(1) NOT NULL,
+nombres_pasajero VARCHAR(30) NOT NULL,
+activo_pasajero INT NOT NULL,
+PRIMARY KEY (run_pasajero))
+ENGINE=InnoDB;
+
+CREATE TABLE sitio(
+id_sitio INT NOT NULL,
+estacionamiento_sitio INT NOT NULL,
+valor_sitio INT NOT NULL,
+estado_sitio VARCHAR(10)NOT NULL,
+activo_sitio INT NOT NULL,
+PRIMARY KEY (id_sitio))
+ENGINE=InnoDB;
+
+CREATE TABLE estacionamiento(
+id_estacionamiento INT NOT NULL,
+estado_estacionamiento VARCHAR(10) NOT NULL,
+activo_estacionamiento INT NOT NULL,
+PRIMARY KEY (id_estacionamiento))
+ENGINE=InnoDB;
+
+CREATE TABLE reserva_sitio(
+nro_resit INT NOT NULL,
+id_sitio_resit INT NOT NULL,
+run_pasajero_resit INT NOT NULL,
+fecha_llegada_resit DATE,
+fecha_salida_resit DATE,
+activo_resit INT NOT NULL,
+PRIMARY KEY (nro_resit))
+ENGINE=InnoDB;
+
