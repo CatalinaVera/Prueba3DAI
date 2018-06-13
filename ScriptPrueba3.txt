@@ -62,7 +62,7 @@ ENGINE=InnoDB;
 
 ALTER TABLE `reserva_estacionamiento`
 ADD CONSTRAINT `ref_resest_sitio`
-FOREIGN KEY (`id_estacionamiento_resit`)
+FOREIGN KEY (`id_estacionamiento_resest`)
 REFERENCES `estacionamiento`(`id_estacionamiento`)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION;
