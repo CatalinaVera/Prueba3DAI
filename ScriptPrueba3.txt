@@ -36,3 +36,13 @@ activo_resit INT NOT NULL,
 PRIMARY KEY (nro_resit))
 ENGINE=InnoDB;
 
+CREATE TABLE reserva_estacionamiento(
+nro_resest INT NOT NULL,
+id_estacionamiento_resest INT NOT NULL,
+run_pasajero_resest INT NOT NULL,
+fecha_llegada_resest DATE,
+fecha_salida_resest DATE,
+activo_resest INT NOT NULL,
+PRIMARY KEY (nro_resest))
+ENGINE=InnoDB;
+
