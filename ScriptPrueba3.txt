@@ -26,6 +26,8 @@ activo_estacionamiento INT NOT NULL,
 PRIMARY KEY (id_estacionamiento))
 ENGINE=InnoDB;
 
+
+
 CREATE TABLE reserva_sitio(
 nro_resit INT NOT NULL,
 id_sitio_resit INT NOT NULL,
@@ -35,6 +37,20 @@ fecha_salida_resit DATE,
 activo_resit INT NOT NULL,
 PRIMARY KEY (nro_resit))
 ENGINE=InnoDB;
+
+ALTER TABLE `reserva_sitio`
+ADD CONSTRAINT `ref_resit_sitio`
+FOREIGN KEY (`id_sitio_resit`)
+REFERENCES `sitio`(`id_sitio`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE `reserva_sitio`
+ADD CONSTRAINT `ref_resit_pasajero`
+FOREIGN KEY (`run_pasajero_resit`)
+REFERENCES `pasajero`(`run_pasajero`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
 
 CREATE TABLE reserva_estacionamiento(
 nro_resest INT NOT NULL,
