@@ -21,14 +21,14 @@ class Reserva_sitioModelo
 		return $this -> conexion;
 	}
 
-	public function ListarResit($id)
+	public function ListarResit()
 	{
 		try 
 		{
 			$resultado = array();
 			$sql = "SELECT * FROM reserva_sitio";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
-			$stm -> execute(array($id));
+			$stm -> execute();
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
 				$reserva_sitio = new Reserva_sitio($r->nro_resit, $r->id_sitio_resit,$r->run_pasajero_resit,
@@ -50,13 +50,14 @@ class Reserva_sitioModelo
         try
         { 
         	$sql = "INSERT INTO $reserva_sitio VALUES(?,?,?,?,?,?)";
-        	$THIS -> getConexion()->getPdo()->prepare($sql)->execute(array(
-        	$resit -> getNro_resit();
-        	$resit -> getId_sitio_resit();
-        	$resit -> getRun_pasajero_resit();
-        	$resit -> getFecha_llegada_resit();
-        	$resit -> getFecha_salida_resit();
-        	$resit -> getActivo_resit();
+        	$this -> getConexion()->getPdo()->prepare($sql)->execute(
+				array(
+        	$resit -> getNro_resit(),
+        	$resit -> getId_sitio_resit(),
+        	$resit -> getRun_pasajero_resit(),
+        	$resit -> getFecha_llegada_resit(),
+        	$resit -> getFecha_salida_resit(),
+        	$resit -> getActivo_resit(),
         	)
         );
         	echo "Agregado exitosamente";

@@ -21,14 +21,14 @@ class SitioModelo
 		return $this -> conexion;
 	}
 
-	public function ListarSitio($id)
+	public function ListarSitio()
 	{
 		try 
 		{
 			$resultado = array();
-			$sql = "SELECT * FROM sitio WHERE id_sitio = ?";
+			$sql = "SELECT * FROM sitio";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
-			$stm -> execute(array($id));
+			$stm -> execute();
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
 				$sitio = new Sitio($r->id_sitio, $r->estacionamiento_sitio,$r->valor_sitio,
