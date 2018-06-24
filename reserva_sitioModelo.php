@@ -71,7 +71,7 @@ class Reserva_sitioModelo
 	{
 		try 
 		{
-			$sql = "SELECT * FROM sitio WHERE nro_sitio = ?";
+			$sql = "SELECT * FROM reserva_sitio WHERE nro_resit = ?";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
 			$stm -> execute(array($nro));
 			$r = $stm -> fetch(PDO::FETCH_OBJ);
@@ -92,7 +92,7 @@ class Reserva_sitioModelo
 	{
 		try 
 		{
-			$sql = "DELETE FROM sitio WHERE nro_sitio = ?";
+			$sql = "DELETE FROM reserva_sitio WHERE nro_resit = ?";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
 			$stm -> execute(array($run));
 			echo "Eliminado";

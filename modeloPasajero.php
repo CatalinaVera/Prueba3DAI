@@ -31,7 +31,7 @@ class PasajeroModelo
 			$stm -> execute(array($id));
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
-				$pasajero = new Pasajero($r->run_pasajero, $r->dv_pasajero,$r->nombres_pasajero,
+				$pasajero = new Pasajero($r->run_pasajero, $r->dv_pasajero,$r->nombres_pasajero,$r->password_pasajero,$r->correo_pasajero,
 				    $r->activo_pasajero);
 				$resultado[]=$pasajero;
 			}
@@ -47,11 +47,13 @@ class PasajeroModelo
 	{
         try
         { 
-        	$sql = "INSERT INTO pasajero VALUES(?,?,?,?)";
+        	$sql = "INSERT INTO pasajero VALUES(?,?,?,?,?,?)";
         	$THIS -> getConexion()->getPdo()->prepare($sql)->execute(array(
         	$pasajero -> getRun_pasajero();
         	$pasajero -> getDv_pasajero();
         	$pasajero -> getNombres_pasajero();
+        	$pasajero -> getPassword_pasajero();
+        	$pasajero -> getCorreo_pasajero();
         	$pasajero -> getActivo_pasajero();
         	)
         );

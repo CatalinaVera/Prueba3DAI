@@ -6,6 +6,8 @@ CREATE TABLE pasajero(
 run_pasajero INT NOT NULL,
 dv_pasajero VARCHAR(1) NOT NULL,
 nombres_pasajero VARCHAR(30) NOT NULL,
+password_pasajero VARCHAR(8) NOT NULL,
+correo_pasajero VARCHAR(30) NOT NULL,
 activo_pasajero INT NOT NULL,
 PRIMARY KEY (run_pasajero))
 ENGINE=InnoDB;

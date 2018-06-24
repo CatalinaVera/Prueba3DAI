@@ -71,7 +71,7 @@ class Reserva_estacionamientoModelo
 	{
 		try 
 		{
-			$sql = "SELECT * FROM estacionamiento WHERE nro_estacionamiento = ?";
+			$sql = "SELECT * FROM reserva_estacionamiento WHERE nro_resest = ?";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
 			$stm -> execute(array($nro));
 			$r = $stm -> fetch(PDO::FETCH_OBJ);
@@ -92,7 +92,7 @@ class Reserva_estacionamientoModelo
 	{
 		try 
 		{
-			$sql = "DELETE FROM estacionamiento WHERE nro_estacionamiento = ?";
+			$sql = "DELETE FROM reserva_estacionamiento WHERE nro_resest = ?";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
 			$stm -> execute(array($run));
 			echo "Eliminado";
