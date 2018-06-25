@@ -29,7 +29,7 @@ PRIMARY KEY (id_estacionamiento))
 ENGINE=InnoDB;
 
 CREATE TABLE reserva_sitio(
-nro_resit INT NOT NULL,
+nro_resit INT NOT NULL AUTO_INCREMENT,
 id_sitio_resit INT NOT NULL,
 run_pasajero_resit INT NOT NULL,
 fecha_llegada_resit DATE,
@@ -53,7 +53,7 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION;
 
 CREATE TABLE reserva_estacionamiento(
-nro_resest INT NOT NULL,
+nro_resest INT NOT NULL AUTO_INCREMENT,
 id_estacionamiento_resest INT NOT NULL,
 run_pasajero_resest INT NOT NULL,
 fecha_llegada_resest DATE,

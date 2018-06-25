@@ -31,7 +31,7 @@ class Reserva_estacionamientoModelo
 			$stm -> execute(array($id));
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
-				$reserva_estacionamiento = new Reserva_estacionamiento($r->nro_resest, $r->id_estacionamiento_resest,$r->run_pasajero_resest,
+				$reserva_estacionamiento = new Reserva_estacionamiento($r->id_estacionamiento_resest,$r->run_pasajero_resest,
 				    $r->fecha_llegada_resest,
 				    $r->fecha_salida_resest,
 				    $r->activo_resest);
@@ -49,14 +49,13 @@ class Reserva_estacionamientoModelo
 	{
         try
         { 
-        	$sql = "INSERT INTO $reserva_estacionamiento VALUES(?,?,?,?,?,?)";
-        	$THIS -> getConexion()->getPdo()->prepare($sql)->execute(array(
-        	$resest-> getNro_resest();
-        	$resest -> getId_estacionamiento_resest();
-        	$resest -> getRun_pasajero_resest();
-        	$resest-> getFecha_llegada_resest();
-        	$resest -> getFecha_salida_resest();
-        	$resest -> getActivo_resest();
+        	$sql = "INSERT INTO $reserva_estacionamiento VALUES(?,?,?,?,?)";
+        	$this -> getConexion()->getPdo()->prepare($sql)->execute(array(
+        	$resest -> getId_estacionamiento_resest(),
+        	$resest -> getRun_pasajero_resest(),
+        	$resest-> getFecha_llegada_resest(),
+        	$resest -> getFecha_salida_resest(),
+        	$resest -> getActivo_resest(),
         	)
         );
         	echo "Agregado exitosamente";
@@ -75,7 +74,7 @@ class Reserva_estacionamientoModelo
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
 			$stm -> execute(array($nro));
 			$r = $stm -> fetch(PDO::FETCH_OBJ);
-			$reserva_estacionamiento = new Reserva_estacionamiento($r->nro_resest, $r->id_estacionamiento_resest,$r->run_pasajero_resest,
+			$reserva_estacionamiento = new Reserva_estacionamiento($r->id_estacionamiento_resest,$r->run_pasajero_resest,
 				    $r->fecha_llegada_resest,
 				    $r->fecha_salida_resest,
 				    $r->activo_resest);

@@ -31,7 +31,7 @@ class Reserva_sitioModelo
 			$stm -> execute();
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
-				$reserva_sitio = new Reserva_sitio($r->nro_resit, $r->id_sitio_resit,$r->run_pasajero_resit,
+				$reserva_sitio = new Reserva_sitio($r->id_sitio_resit,$r->run_pasajero_resit,
 				    $r->fecha_llegada_resit,
 				    $r->fecha_salida_resit,
 				    $r->activo_resit);
@@ -49,10 +49,9 @@ class Reserva_sitioModelo
 	{
         try
         { 
-        	$sql = "INSERT INTO $reserva_sitio VALUES(?,?,?,?,?,?)";
+        	$sql = "INSERT INTO $reserva_sitio VALUES(?,?,?,?,?)";
         	$this -> getConexion()->getPdo()->prepare($sql)->execute(
 				array(
-        	$resit -> getNro_resit(),
         	$resit -> getId_sitio_resit(),
         	$resit -> getRun_pasajero_resit(),
         	$resit -> getFecha_llegada_resit(),
@@ -76,7 +75,7 @@ class Reserva_sitioModelo
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
 			$stm -> execute(array($nro));
 			$r = $stm -> fetch(PDO::FETCH_OBJ);
-			$reserva_sitio = new Reserva_sitio($r->nro_resit, $r->id_sitio_resit,$r->run_pasajero_resit,
+			$reserva_sitio = new Reserva_sitio($r->id_sitio_resit,$r->run_pasajero_resit,
 				    $r->fecha_llegada_resit,
 				    $r->fecha_salida_resit,
 				    $r->activo_resit);
