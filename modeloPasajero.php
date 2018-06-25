@@ -1,4 +1,4 @@
-<?php
+<<?php
 include_once('pasajero.php');
 include_once('conexion.php');
 
@@ -49,12 +49,12 @@ class PasajeroModelo
         { 
         	$sql = "INSERT INTO pasajero VALUES(?,?,?,?,?,?)";
         	$THIS -> getConexion()->getPdo()->prepare($sql)->execute(array(
-        	$pasajero -> getRun_pasajero();
-        	$pasajero -> getDv_pasajero();
-        	$pasajero -> getNombres_pasajero();
-        	$pasajero -> getPassword_pasajero();
-        	$pasajero -> getCorreo_pasajero();
-        	$pasajero -> getActivo_pasajero();
+        	$pasajero -> getRun_pasajero(),
+        	$pasajero -> getDv_pasajero(),
+        	$pasajero -> getNombres_pasajero(),
+        	$pasajero -> getPassword_pasajero(),
+        	$pasajero -> getCorreo_pasajero(),
+        	$pasajero -> getActivo_pasajero()
         	)
         );
         }

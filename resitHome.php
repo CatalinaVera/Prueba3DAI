@@ -51,7 +51,7 @@ if (isset($_POST['ReservaSitio1']))
             
             	if($r->getId_sitio_resit()==$sitio->getId_sitio_resit())
             	{
-		            if($r->getFecha_salida_resit() > $sitio->getFecha_llegada_resit())
+		            if($r->getFecha_salida_resit() >= $sitio->getFecha_llegada_resit())
 		            { 
 
 	                    echo '<!DOCTYPE html>
@@ -80,42 +80,13 @@ if (isset($_POST['ReservaSitio1']))
 					</div>
 					</html>';
 					break;
-		            }
-		            else
-		            {
-		            	$modeloRsit -> RegistrarResit($sitio);
-		            	echo '<!DOCTYPE html>
-					<html>
-					<title>Camping Rio Maule</title>
-					<meta charset="UTF-8">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					<style>
-					body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-					</style>
-					<body class="w3-light-grey">
-					<!-- Header -->
-					<header class="w3-display-container w3-content" style="max-width:1500px;">
-					  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="900">
-					  <div class="w3-display-left w3-padding w3-col l7 m8">
-					    <div class="w3-container w3-green">
-					      <h2><i class="fa fa-tree w3-margin-right"></i>Reservado Exitosamente</h2>
-					    </div>
-					  </div>
-					</header>
-					<div style="text-align: right">
-					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
-					</div>
-					</html>';
-					break;
+	               }
 	            }
-	        }
-	            else
-			    {
-			        $modeloRsit -> RegistrarResit($sitio);    	
-			        echo '<!DOCTYPE html>
+	            break;
+            }
+
+            $modeloRsit -> RegistrarResit($sitio);
+            echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -140,8 +111,6 @@ if (isset($_POST['ReservaSitio1']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-			    }
-            }
        }
        
 }
@@ -188,7 +157,7 @@ if (isset($_POST['ReservaSitio2']))
             
             	if($r->getId_sitio_resit()==$sitio->getId_sitio_resit())
             	{
-		            if($r->getFecha_salida_resit() > $sitio->getFecha_llegada_resit())
+		            if($r->getFecha_salida_resit() >= $sitio->getFecha_llegada_resit())
 		            { 
 
 	                    echo '<!DOCTYPE html>
@@ -217,42 +186,13 @@ if (isset($_POST['ReservaSitio2']))
 					</div>
 					</html>';
 					break;
-		            }
-		            else
-		            {
-		            	$modeloRsit -> RegistrarResit($sitio);
-		            	echo '<!DOCTYPE html>
-					<html>
-					<title>Camping Rio Maule</title>
-					<meta charset="UTF-8">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					<style>
-					body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-					</style>
-					<body class="w3-light-grey">
-					<!-- Header -->
-					<header class="w3-display-container w3-content" style="max-width:1500px;">
-					  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="900">
-					  <div class="w3-display-left w3-padding w3-col l7 m8">
-					    <div class="w3-container w3-green">
-					      <h2><i class="fa fa-tree w3-margin-right"></i>Reservado Exitosamente</h2>
-					    </div>
-					  </div>
-					</header>
-					<div style="text-align: right">
-					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
-					</div>
-					</html>';
-					break;
+	               }
 	            }
-	        }
-	            else
-			    {
-			        $modeloRsit -> RegistrarResit($sitio);    	
-			        echo '<!DOCTYPE html>
+	            break;
+            }
+
+            $modeloRsit -> RegistrarResit($sitio);
+            echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -277,8 +217,6 @@ if (isset($_POST['ReservaSitio2']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-			    }
-            }
        }
        
 }
@@ -325,7 +263,7 @@ if (isset($_POST['ReservaSitio3']))
             
             	if($r->getId_sitio_resit()==$sitio->getId_sitio_resit())
             	{
-		            if($r->getFecha_salida_resit() > $sitio->getFecha_llegada_resit())
+		            if($r->getFecha_salida_resit() >= $sitio->getFecha_llegada_resit())
 		            { 
 
 	                    echo '<!DOCTYPE html>
@@ -354,42 +292,13 @@ if (isset($_POST['ReservaSitio3']))
 					</div>
 					</html>';
 					break;
-		            }
-		            else
-		            {
-		            	$modeloRsit -> RegistrarResit($sitio);
-		            	echo '<!DOCTYPE html>
-					<html>
-					<title>Camping Rio Maule</title>
-					<meta charset="UTF-8">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					<style>
-					body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-					</style>
-					<body class="w3-light-grey">
-					<!-- Header -->
-					<header class="w3-display-container w3-content" style="max-width:1500px;">
-					  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="900">
-					  <div class="w3-display-left w3-padding w3-col l7 m8">
-					    <div class="w3-container w3-green">
-					      <h2><i class="fa fa-tree w3-margin-right"></i>Reservado Exitosamente</h2>
-					    </div>
-					  </div>
-					</header>
-					<div style="text-align: right">
-					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
-					</div>
-					</html>';
-					break;
+	               }
 	            }
-	        }
-	            else
-			    {
-			        $modeloRsit -> RegistrarResit($sitio);    	
-			        echo '<!DOCTYPE html>
+	            break;
+            }
+
+            $modeloRsit -> RegistrarResit($sitio);
+            echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -414,8 +323,6 @@ if (isset($_POST['ReservaSitio3']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-			    }
-            }
        }
        
 }
@@ -462,7 +369,7 @@ if (isset($_POST['ReservaSitio4']))
             
             	if($r->getId_sitio_resit()==$sitio->getId_sitio_resit())
             	{
-		            if($r->getFecha_salida_resit() > $sitio->getFecha_llegada_resit())
+		            if($r->getFecha_salida_resit() >= $sitio->getFecha_llegada_resit())
 		            { 
 
 	                    echo '<!DOCTYPE html>
@@ -490,45 +397,14 @@ if (isset($_POST['ReservaSitio4']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-
 					break;
-
-		            }
-		            else
-		            {
-		            	$modeloRsit -> RegistrarResit($sitio);
-		            	echo '<!DOCTYPE html>
-					<html>
-					<title>Camping Rio Maule</title>
-					<meta charset="UTF-8">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					<style>
-					body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-					</style>
-					<body class="w3-light-grey">
-					<!-- Header -->
-					<header class="w3-display-container w3-content" style="max-width:1500px;">
-					  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="900">
-					  <div class="w3-display-left w3-padding w3-col l7 m8">
-					    <div class="w3-container w3-green">
-					      <h2><i class="fa fa-tree w3-margin-right"></i>Reservado Exitosamente</h2>
-					    </div>
-					  </div>
-					</header>
-					<div style="text-align: right">
-					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
-					</div>
-					</html>';
-					break;
+	               }
 	            }
-	        }
-	            else
-			    {
-			        $modeloRsit -> RegistrarResit($sitio);    	
-			        echo '<!DOCTYPE html>
+	            break;
+            }
+
+            $modeloRsit -> RegistrarResit($sitio);
+            echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -553,8 +429,6 @@ if (isset($_POST['ReservaSitio4']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-			    }
-            }
        }
        
 }
@@ -601,7 +475,7 @@ if (isset($_POST['ReservaSitio5']))
             
             	if($r->getId_sitio_resit()==$sitio->getId_sitio_resit())
             	{
-		            if($r->getFecha_salida_resit() > $sitio->getFecha_llegada_resit())
+		            if($r->getFecha_salida_resit() >= $sitio->getFecha_llegada_resit())
 		            { 
 
 	                    echo '<!DOCTYPE html>
@@ -629,42 +503,14 @@ if (isset($_POST['ReservaSitio5']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-		            }
-		            else
-		            {
-		            	$modeloRsit -> RegistrarResit($sitio);
-		            	echo '<!DOCTYPE html>
-					<html>
-					<title>Camping Rio Maule</title>
-					<meta charset="UTF-8">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					<style>
-					body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-					</style>
-					<body class="w3-light-grey">
-					<!-- Header -->
-					<header class="w3-display-container w3-content" style="max-width:1500px;">
-					  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="900">
-					  <div class="w3-display-left w3-padding w3-col l7 m8">
-					    <div class="w3-container w3-green">
-					      <h2><i class="fa fa-tree w3-margin-right"></i>Reservado Exitosamente</h2>
-					    </div>
-					  </div>
-					</header>
-					<div style="text-align: right">
-					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
-					</div>
-					</html>';
 					break;
+	               }
 	            }
-	        }
-	            else
-			    {
-			        $modeloRsit -> RegistrarResit($sitio);    	
-			        echo '<!DOCTYPE html>
+	            break;
+            }
+
+            $modeloRsit -> RegistrarResit($sitio);
+            echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -689,8 +535,6 @@ if (isset($_POST['ReservaSitio5']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-			    }
-            }
        }
        
 }
@@ -737,7 +581,7 @@ if (isset($_POST['ReservaSitio6']))
             
             	if($r->getId_sitio_resit()==$sitio->getId_sitio_resit())
             	{
-		            if($r->getFecha_salida_resit() > $sitio->getFecha_llegada_resit())
+		            if($r->getFecha_salida_resit() >= $sitio->getFecha_llegada_resit())
 		            { 
 
 	                    echo '<!DOCTYPE html>
@@ -765,42 +609,14 @@ if (isset($_POST['ReservaSitio6']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-		            }
-		            else
-		            {
-		            	$modeloRsit -> RegistrarResit($sitio);
-		            	echo '<!DOCTYPE html>
-					<html>
-					<title>Camping Rio Maule</title>
-					<meta charset="UTF-8">
-					<meta name="viewport" content="width=device-width, initial-scale=1">
-					<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-					<style>
-					body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-					</style>
-					<body class="w3-light-grey">
-					<!-- Header -->
-					<header class="w3-display-container w3-content" style="max-width:1500px;">
-					  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="900">
-					  <div class="w3-display-left w3-padding w3-col l7 m8">
-					    <div class="w3-container w3-green">
-					      <h2><i class="fa fa-tree w3-margin-right"></i>Reservado Exitosamente</h2>
-					    </div>
-					  </div>
-					</header>
-					<div style="text-align: right">
-					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
-					</div>
-					</html>';
 					break;
+	               }
 	            }
-	        }
-	            else
-			    {
-			        $modeloRsit -> RegistrarResit($sitio);    	
-			        echo '<!DOCTYPE html>
+	            break;
+            }
+
+            $modeloRsit -> RegistrarResit($sitio);
+            echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -825,9 +641,6 @@ if (isset($_POST['ReservaSitio6']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
-
-			    }
-            }
        }
        
 }

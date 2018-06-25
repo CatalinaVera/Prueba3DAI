@@ -49,7 +49,7 @@ class Reserva_estacionamientoModelo
 	{
         try
         { 
-        	$sql = "INSERT INTO $reserva_estacionamiento VALUES(?,?,?,?,?)";
+        	$sql = "INSERT INTO $reserva_estacionamiento VALUES(default,?,?,?,?,?)";
         	$this -> getConexion()->getPdo()->prepare($sql)->execute(array(
         	$resest -> getId_estacionamiento_resest(),
         	$resest -> getRun_pasajero_resest(),
@@ -58,7 +58,7 @@ class Reserva_estacionamientoModelo
         	$resest -> getActivo_resest(),
         	)
         );
-        	echo "Agregado exitosamente";
+        	
         }
         catch (Exception $e) 
 		{
