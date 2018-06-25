@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Camping Rio Maule</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+  </style>
+  <body class="w3-light-grey">
+
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    
+  <script src="js/jquery-3.1.0.min.js"></script>
+</head>
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-large">
+  <i class="w3-bar-item w3-button w3-green w3-mobile"><i class="fa fa-tree w3-margin-right"></i>Camping Rio Maule</i>
+  <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Imagenes</a>
+  <a href="#form" class="w3-bar-item w3-button w3-mobile">Formulario</a>
+  <a href="login.html" class="w3-bar-item w3-button w3-mobile">Login</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contacto</a>
+</div>
+<!-- Header -->
+<header class="w3-display-container w3-content" style="max-width:1500px;">
+  <img class="w3-image" src="http://home.bt.com/images/5-best-places-to-go-camping-in-the-uk-136425069414302601-180215150057.jpg"  style="min-width:1000px" width="1500" height="900">
+  <div class="w3-display-left w3-padding w3-col l7 m8">
+    <div class="w3-container w3-green">
+      <h2><i class="fa fa-tree w3-margin-right"></i>Camping Rio Maule</h2>
+    </div>
+  </div>
+</header>
+<!--slider-->
+<div class="w3-content" style="max-width:1532px;">
+  <div class="w3-container w3-margin-top" id="rooms">
+    <h2>Imagenes de camping</h2>
+    <p>Estas imagenes muestran partes del camping</p>
+  </div>
+
+  <div class="w3-content w3-display-container">
+    <img class="mySlides" src="img/img1.jpg" width="100%">
+    <img class="mySlides" src="img/img2.jpg" width="100%">
+    <img class="mySlides" src="img/img3.jpg" width="100%">
+    <img class="mySlides" src="img/img4.jpg" width="100%">
+    <img class="mySlides" src="img/img5.jpg" width="100%">
+    <img class="mySlides" src="img/img6.jpg" width="100%">
+      
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  </div>
+</div>
+<br><br><br><br>
+<!--Formulario-->
+<div class="w3-container" id="form">
+  <h2>Formulario</h2>
+  <form action="formHome.php" method="post">
+    <div class="w3-row-padding" style="margin:8px -16px;">
+      <div class="w3-half w3-margin-bottom">
+        <label>Run </label>
+        <input class="w3-input w3-border" type="number" name="txtRun" value="" required>
+      </div>
+      <div class="w3-half">
+        <label>DV </label>
+        <input class="w3-input w3-border" type="text" name="txtDv" required>
+      </div>
+    </div>
+    <div class="w3-row-padding" style="margin:8px -16px;">
+      <div class="w3-half w3-margin-bottom">
+        <label>Nombre</label>
+        <input class="w3-input w3-border" type="text" name="txtNombre" required>
+      </div>
+      <div class="w3-half">
+        <label>Apellido</label>
+        <input class="w3-input w3-border" type="text" name="txtApellido" required>
+      </div>
+    </div>
+    <div class="w3-row-padding" style="margin:8px -16px;">
+        <div class="w3-half w3-margin-bottom">
+          <label>Contraseña</label>
+          <input class="w3-input w3-border" type="password" name="txtPass" required>
+        </div>
+        <div class="w3-half">
+          <label>Correo Electronico</label>
+          <input class="w3-input w3-border" type="email" name="txtEmail" required>
+        </div>
+      </div>
+      <input class="w3-button w3-block w3-black w3-margin-bottom" type="submit" name="Registrar" value="Registrar">
+  </form>
+</div>
+<br><br><br><br>
+<!--Contactenos-->
+<div class="w3-container" id="contact">
+  <h2>Contacto</h2>
+  <p>Si tiene alguna inquietud no dude en escribirnos!.</p>
+  <i class="fa fa-map-marker w3-text-green" style="width:30px"></i> Región del Maule, CHILE<br>
+  <i class="fa fa-phone w3-text-green" style="width:30px"></i> Teléfono: +56912345678<br>
+  <i class="fa fa-envelope w3-text-green" style="width:30px"> </i> Email: consultas@campingriomaule.com<br>
+  <form action="action_page.php" target="_blank">
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nombre Completo" required name="Name"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+    <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Mensaje" required name="Message"></p>
+    <p><button class="w3-button w3-black w3-padding-large" type="submit">Enviar Mensaje</button></p>
+  </form>
+</div>
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) 
+  {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n)
+  {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++)
+      {
+        x[i].style.display = "none";  
+      }
+
+      x[slideIndex-1].style.display = "block";  
+  }
+</script>
+</body>
+</html>

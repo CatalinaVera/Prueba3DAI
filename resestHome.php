@@ -14,7 +14,7 @@ if (isset($_POST['ReservarEstacionamiento']))
     $estacionamiento = new Reserva_estacionamiento($_POST['txtIdEst'], $_POST['txtRun'], $_POST['txtLlegada'],$_POST['txtSalida'],1);
     $hoy = date("Y-m-d"); 
 
-    if($hoy > $estacionamiento->getFecha_llegada_resit())
+    if($hoy > $estacionamiento->getFecha_llegada_resest())
     {
     	echo '<!DOCTYPE html>
 					<html>
@@ -110,4 +110,5 @@ if (isset($_POST['ReservarEstacionamiento']))
 					<a href="reserva.html" class="w3-bar-item w3-button w3-mobile">Volver</a>
 					</div>
 					</html>';
+	}
 ?>

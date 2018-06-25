@@ -1,15 +1,15 @@
 <?php
 
-class Reserva_sitio{
+class Reserva_estacionamiento{
 
 	
-	private $id_estacionamineto_resest;
+	private $id_estacionamiento_resest;
 	private $run_pasajero_resest;
 	private $fecha_llegada_resest;
 	private $fecha_salida_resest;
 	private $activo_resest;
 
-	public function __construct ($id_estacionamineto_resest,$run_pasajero_resest, $fecha_llegada_resest,$fecha_salida_resest,$activo_resest)
+	public function __construct ($id_estacionamiento_resest,$run_pasajero_resest, $fecha_llegada_resest,$fecha_salida_resest,$activo_resest)
 	{
 		
 		$this -> setId_estacionamiento_resest($id_estacionamiento_resest);
@@ -21,7 +21,7 @@ class Reserva_sitio{
 	}
 
 
-	public function setId_estacionamiento_resest($id_estacionamiento_resit)
+	public function setId_estacionamiento_resest($id_estacionamiento_resest)
 	{
 		$this -> id_estacionamiento_resest = $id_estacionamiento_resest;
 	}

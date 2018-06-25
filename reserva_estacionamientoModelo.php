@@ -21,14 +21,14 @@ class Reserva_estacionamientoModelo
 		return $this -> conexion;
 	}
 
-	public function ListarResest($id)
+	public function ListarResest()
 	{
 		try 
 		{
 			$resultado = array();
 			$sql = "SELECT * FROM reserva_estacionamiento";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
-			$stm -> execute(array($id));
+			$stm -> execute();
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
 				$reserva_estacionamiento = new Reserva_estacionamiento($r->id_estacionamiento_resest,$r->run_pasajero_resest,

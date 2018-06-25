@@ -5,8 +5,8 @@ include_once('reserva_sitioModelo.php');
 include_once('sitio.php');
 include_once('reserva_sitio.php');
 
-$modeloSitio = new sitioModelo();
-$modeloRsit = new reserva_sitioModelo();
+$modeloSitio = new SitioModelo();
+$modeloRsit = new Reserva_sitioModelo();
 
 if (isset($_POST['ReservaSitio1']))
 {
@@ -18,7 +18,7 @@ if (isset($_POST['ReservaSitio1']))
 
        if($hoy > $sitio->getFecha_llegada_resit())
        {
-       	   echo '<!DOCTYPE html>
+       	  echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>
 					<meta charset="UTF-8">
@@ -85,7 +85,7 @@ if (isset($_POST['ReservaSitio1']))
 	            break;
             }
 
-            $modeloRsit -> RegistrarResit($sitio);
+            $modeloRsit->RegistrarResit($sitio);
             echo '<!DOCTYPE html>
 					<html>
 					<title>Camping Rio Maule</title>

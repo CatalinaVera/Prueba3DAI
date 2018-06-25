@@ -21,14 +21,14 @@ class PasajeroModelo
 		return $this -> conexion;
 	}
 
-	public function ListarPasajeros($id)
+	public function ListarPasajeros()
 	{
 		try 
 		{
 			$resultado = array();
-			$sql = "SELECT * FROM pasajero WHERE run_pasajero = ?";
+			$sql = "SELECT * FROM pasajero";
 			$stm = $this->getConexion()->getPDO()->prepare($sql);
-			$stm -> execute(array($id));
+			$stm -> execute();
 			foreach($stm -> fetchALL(PDO::FETCH_OBJ)as $r)
 			{
 				$pasajero = new Pasajero($r->run_pasajero, $r->dv_pasajero,$r->nombres_pasajero,$r->password_pasajero,$r->correo_pasajero,

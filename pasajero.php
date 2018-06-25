@@ -9,7 +9,7 @@ class Pasajero{
 	private $correo_pasajero;
 	private $activo_pasajero;
 
-	public function __construct ($run_pasajero, $dv_pasajero,$nombres_pasajero,$password_pasajero,$correo_pasajero, $activo_pasajero)
+	public function __construct ($run_pasajero, $dv_pasajero, $nombres_pasajero, $password_pasajero, $correo_pasajero, $activo_pasajero)
 	{
 		$this -> setRun_pasajero($run_pasajero);
 		$this -> setDv_pasajero($dv_pasajero);
