@@ -47,9 +47,10 @@ class Reserva_sitioModelo
 
 	public function RegistrarResit(Reserva_sitio $resit)
 	{
+		
         try
         { 
-        	$sql = "INSERT INTO $reserva_sitio VALUES(?,?,?,?,?)";
+        	$sql = "INSERT INTO reserva_sitio VALUES(default,?,?,?,?,?)";
         	$this -> getConexion()->getPdo()->prepare($sql)->execute(
 				array(
         	$resit -> getId_sitio_resit(),
@@ -59,7 +60,6 @@ class Reserva_sitioModelo
         	$resit -> getActivo_resit(),
         	)
         );
-        	echo "Agregado exitosamente";
         }
         catch (Exception $e) 
 		{

@@ -99,7 +99,7 @@ if (isset($_POST['Sitio2']))
 			        <div class="w3-row-padding" style="margin:8px -16px;">
 			          <div class="w3-half w3-margin-bottom">
 			            <label><i class="fa fa-address-card-o"></i> Run </label>
-			            <input class="w3-input w3-border"  name="txtNombreC" min="1">
+			            <input class="w3-input w3-border"  name="txtRun" min="1">
 			          </div>
 			          <div class="w3-half">
 			            <label><i class="fa fa-address-card-o"></i> DV</label>
@@ -157,7 +157,7 @@ if (isset($_POST['Sitio3']))
 			        <div class="w3-row-padding" style="margin:8px -16px;">
 			          <div class="w3-half w3-margin-bottom">
 			            <label><i class="fa fa-address-card-o"></i> Run </label>
-			            <input class="w3-input w3-border"  name="txtNombreC" min="1">
+			            <input class="w3-input w3-border"  name="txtRun" min="1">
 			          </div>
 			          <div class="w3-half">
 			            <label><i class="fa fa-address-card-o"></i> DV</label>
@@ -215,7 +215,7 @@ if (isset($_POST['Sitio4']))
 			        <div class="w3-row-padding" style="margin:8px -16px;">
 			          <div class="w3-half w3-margin-bottom">
 			            <label><i class="fa fa-address-card-o"></i> Run </label>
-			            <input class="w3-input w3-border"  name="txtNombreC" min="1">
+			            <input class="w3-input w3-border"  name="txtRun" min="1">
 			          </div>
 			          <div class="w3-half">
 			            <label><i class="fa fa-address-card-o"></i> DV</label>
@@ -273,7 +273,7 @@ if (isset($_POST['Sitio5']))
 			        <div class="w3-row-padding" style="margin:8px -16px;">
 			          <div class="w3-half w3-margin-bottom">
 			            <label><i class="fa fa-address-card-o"></i> Run </label>
-			            <input class="w3-input w3-border"  name="txtNombreC" min="1">
+			            <input class="w3-input w3-border"  name="txtRun" min="1">
 			          </div>
 			          <div class="w3-half">
 			            <label><i class="fa fa-address-card-o"></i> DV</label>
@@ -331,7 +331,7 @@ if (isset($_POST['Sitio6']))
 			        <div class="w3-row-padding" style="margin:8px -16px;">
 			          <div class="w3-half w3-margin-bottom">
 			            <label><i class="fa fa-address-card-o"></i> Run </label>
-			            <input class="w3-input w3-border"  name="txtNombreC" min="1">
+			            <input class="w3-input w3-border"  name="txtRun" min="1">
 			          </div>
 			          <div class="w3-half">
 			            <label><i class="fa fa-address-card-o"></i> DV</label>

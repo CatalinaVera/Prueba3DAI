@@ -77,15 +77,6 @@ ON DELETE NO ACTION
 ON UPDATE NO ACTION;
 
 
-CREATE TABLE sitio(
-id_sitio INT NOT NULL,
-estacionamiento_sitio INT NOT NULL,
-valor_sitio INT NOT NULL,
-estado_sitio VARCHAR(10)NOT NULL,
-activo_sitio INT NOT NULL,
-PRIMARY KEY (id_sitio))
-ENGINE=InnoDB;
-
 INSERT INTO sitio VALUES
 (1,1,2000,'Disponible',1),
 (2,1,2000,'Disponible',1),
@@ -93,3 +84,9 @@ INSERT INTO sitio VALUES
 (4,0,1500,'Disponible',1),
 (5,0,1500,'Disponible',1),
 (6,0,1500,'Disponible',1);
+
+INSERT INTO pasajero VALUES
+(18065243,'4','Catalina Vera','123','correo@falso.cl',1);
+
+INSERT INTO reserva_sitio VALUES
+(default,1,18065243,'2018-08-30','2018-09-10',1);
